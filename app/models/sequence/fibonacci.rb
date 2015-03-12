@@ -8,6 +8,8 @@ class Sequence::Fibonacci
   def sequence
     @sequence ||= if n == -1
       [0]
+    elsif n < -1
+      raise 'n must be greater than or equal to zero'
     else
       n.times.inject([0, 1]) do |memo, num|
         memo + [memo[-2] + memo[-1]]

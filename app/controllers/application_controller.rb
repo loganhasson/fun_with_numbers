@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   def check_n
     if !(params[:n].to_i.to_s == params[:n])
       render json: { message: 'n must be a valid integer' }, status: 422 and return
+    elsif params[:n].start_with?('-')
+      render json: { message: 'n must be greater than or equal to zero' }, status: 422 and return
     end
   end
 
