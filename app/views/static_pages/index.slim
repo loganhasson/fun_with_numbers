@@ -7,6 +7,10 @@
 .container
   .row
     .col-xs-12.api-doc
+      p
+        a href='/sequences/fibonacci/500' Fibonacci Example
+      p
+        a href='/sequences/happy/112' Happy Numbers Example
       code
         p 1. GET '/sequences/:sequence_name/:n'
         p.indent-1
@@ -35,7 +39,12 @@
           | message: "n must be greater than or equal to zero"
         p.indent-3
           | }
-        br
+      br
+      p
+        a href='/sequences/fibonacci/first/50' Fibonacci Example
+      p
+        a href='/sequences/happy/first/1000' Happy Numbers Example
+      code
         p 2. GET '/sequences/:sequence_name/first/:n'
         p.indent-1
           | * Returns the first n numbers of a sequence (with n starting at 0)
