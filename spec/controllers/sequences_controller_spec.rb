@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe SequencesController, type: :controller do
+describe SequencesController do
 
 end
