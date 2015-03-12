@@ -7,5 +7,6 @@ if ['-h', '--help'].include?(ARGV[0]) || ARGV[1]
 elsif ARGV[0]
   system("heroku create #{ARGV[0]}")
 else
+  puts Dir.pwd.split('/').last
   system("heroku create #{Dir.pwd.split('/').last}")
 end
