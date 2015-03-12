@@ -34,3 +34,35 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+.api-doc {
+  margin-top: 25px;
+}
+
+code {
+  padding: 0;
+
+  p.indent-1 {
+    padding-left: 23px;
+  }
+
+  p.indent-2 {
+    padding-left: 53px;
+  }
+
+  p.indent-3 {
+    padding-left: 75px;
+  }
+
+  p.indent-4 {
+    padding-left: 100px;
+  }
+
+  p.indent-5 {
+    padding-left: 118px;
+  }
+
+  p.indent-6 {
+    padding-left: 134px;
+  }
+}

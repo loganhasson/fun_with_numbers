@@ -1,0 +1,79 @@
+.container
+  .row
+    .col-xs-12.text-center
+      h1
+        | Fun With Numbers
+
+.container
+  .row
+    .col-xs-12.api-doc
+      code
+        p 1. GET '/sequences/:sequence_name/:n'
+        p.indent-1
+          | * Returns the nth term of a sequence (with n starting at 0)
+        p.indent-1
+          | * Supported sequence_names: 'fibonacci', 'happy'
+        p.indent-2
+          | - Example Good Response:
+        p.indent-3
+          | {
+        p.indent-4
+          | sequence: {
+        p.indent-5
+          | name: "fibonacci",
+        p.indent-5
+          | nth_term: 5
+        p.indent-4
+          | }
+        p.indent-3
+          | }
+        p.indent-2
+          | - Example Bad Response:
+        p.indent-3
+          | {
+        p.indent-4
+          | message: "n must be greater than or equal to zero"
+        p.indent-3
+          | }
+        br
+        p 2. GET '/sequences/:sequence_name/first/:n'
+        p.indent-1
+          | * Returns the first n numbers of a sequence (with n starting at 0)
+        p.indent-1
+          | * Supported sequence_names: 'fibonacci', 'happy'
+        p.indent-2
+          | - Example Good Response:
+        p.indent-3
+          | {
+        p.indent-4
+          | sequence: {
+        p.indent-5
+          | name: "fibonacci",
+        p.indent-5
+          | terms: [
+        p.indent-6
+          | 0,
+        p.indent-6
+          | 1,
+        p.indent-6
+          | 1,
+        p.indent-6
+          | 2,
+        p.indent-6
+          | 3,
+        p.indent-6
+          | 5
+        p.indent-5
+          | ]
+        p.indent-4
+          | }
+        p.indent-3
+          | }
+        p.indent-2
+          | - Example Bad Response:
+        p.indent-3
+          | {
+        p.indent-4
+          | message: "Unrecognized sequence: tomato"
+        p.indent-3
+          | }
