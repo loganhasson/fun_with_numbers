@@ -1,4 +1,5 @@
 class SequencesController < ApplicationController
+  # Before actions defined on ApplicationController
   before_action :set_sequence
   before_action :check_n
   before_action :set_n
